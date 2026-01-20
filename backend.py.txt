@@ -17,8 +17,8 @@ app.add_middleware(
 
 # USUARIO DEL SISTEMA
 USERS = {
-    "julianPZ": {
-        "password": "150635Jp"
+    "admin": {
+        "password": "150635"
     }
 }
 
