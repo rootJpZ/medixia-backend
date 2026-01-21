@@ -1,0 +1,61 @@
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+
+app = FastAPI(
+    title="MEDIXIA",
+    description="Plataforma Profesional de Medicamentos"
+)
+
+# CORS para permitir conexión desde la web
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
+
+# USUARIO DEL SISTEMA
+USERS = {
+    "admin": {
+        "password": "150635"
+    }
+}
+
+class LoginData(BaseModel):
+    username: str
+    password: str
+
+@app.get("/health")
+def health():
+    return {
+        "status": "ok",
+        "service": "MEDIXIA"
+    }
+
+@app.post("/login")
+def login(data: LoginData):
+    user = USERS.get(data.username)
+
+    if not user or user["password"] != data.password:
+        raise HTTPException(
+            status_code=401,
+            detail="Credenciales incorrectas"
+        )
+
+    return {
+        "token": "medixia-token"
+    }
+
+@app.get("/medicamentos")
+def medicamentos():
+    return [
+        {
+            "principio_activo_anmat": "METFORMINA",
+            "marca": "Glucophage",
+            "presentacion": "850 mg",
+            "laboratorio": "Merck",
+            "obra_social": "PAMI",
+            "cobertura": "100%"
+        }
+    ]
