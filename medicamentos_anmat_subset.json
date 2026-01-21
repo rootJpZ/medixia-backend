@@ -1,0 +1,42 @@
+[
+  {
+    "principio_activo_anmat": "METFORMINA",
+    "marca": "GLUCOPHAGE",
+    "presentacion": "850 mg comprimidos x30",
+    "laboratorio": "MERCK",
+    "obra_social": "SIN DEFINIR",
+    "cobertura": "-"
+  },
+  {
+    "principio_activo_anmat": "ENALAPRIL",
+    "marca": "RENITEC",
+    "presentacion": "10 mg comprimidos x30",
+    "laboratorio": "MSD",
+    "obra_social": "SIN DEFINIR",
+    "cobertura": "-"
+  },
+  {
+    "principio_activo_anmat": "LOSARTAN",
+    "marca": "COZAAR",
+    "presentacion": "50 mg comprimidos x30",
+    "laboratorio": "MSD",
+    "obra_social": "SIN DEFINIR",
+    "cobertura": "-"
+  },
+  {
+    "principio_activo_anmat": "AMOXICILINA",
+    "marca": "AMOXIDAL",
+    "presentacion": "500 mg cápsulas x21",
+    "laboratorio": "ROEMMERS",
+    "obra_social": "SIN DEFINIR",
+    "cobertura": "-"
+  },
+  {
+    "principio_activo_anmat": "OMEPRAZOL",
+    "marca": "LOSEC",
+    "presentacion": "20 mg cápsulas x14",
+    "laboratorio": "ASTRAZENECA",
+    "obra_social": "SIN DEFINIR",
+    "cobertura": "-"
+  }
+]
